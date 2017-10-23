@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Pathway}{9}{0}{2}
-\beamer@sectionintoc {3}{La base de donnees aujourd'hui}{16}{0}{3}
-\beamer@sectionintoc {4}{Perspective}{23}{0}{4}
