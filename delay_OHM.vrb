@@ -1,0 +1,15 @@
+\frametitle{Connecter R et postGIS}
+\vspace{-2em}
+\begin{verbatim}
+library(rpostgis)
+con<-dbConnect("PostgreSQL",
+                dbname='fs_gis',
+                host='172.17.0.2',
+                port='5432',
+                user='postgres',
+                password='postgres')
+shp <- pgGetGeom(con,
+            name=c("data_gmv","communes_gmv"),
+            geom = "geom")
+plot(shp)
+\end{verbatim}

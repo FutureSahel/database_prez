@@ -30,10 +30,8 @@
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
-%\usepackage{chronology}
-\usepackage{chronosys}
 \usepackage{subfigure}
+\usepackage{verbatim}
 
 \newcommand{\tabitem}{%
   \usebeamertemplate{itemize item}\hspace*{\labelsep}}
@@ -63,11 +61,11 @@
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\title{A Great Green Wall social-ecological systems database}
-\subtitle{A tool for researchers and managers}
+\title{Un systeme de base de donnees pour la grande Muraille Verte}
+\subtitle{Un outil pour la recherche et la gestion}
 %\date{\small{\jobname}}
 %\date{\today}
-\date{15 juin 2016}
+\date{26 octobre 2017}
 \author{\texttt{ E. Delay}}
 \institute{\textsc{Ohm} Téssékéré - Sénégal}
 
@@ -113,12 +111,13 @@ pdfcreator = {}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: ANR framework in 4 wp
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{frame}[c]{The Great Green Wall}
+\begin{frame}[c]{La grande Muraille verte}
 \vspace{-1cm}
-Yes, the Green Great Wall can be in China, by our sandbox is in Africa, where we work for the "Future Sahel" ANR project.
+Juste pour se remmtre dans le bain ! L'ANR \textit{Future Sahel} se focalise sur des  approches multi-scalaires pour de meilleures pratiques de gestion des ressources des espaces saheliens de la Grande Muraille Verte.
 \begin{figure}
 	\centering
-	\includegraphics[width = 0.6\textwidth]{img/great_wall}
+	\includegraphics[width = 0.5\textwidth]{img/great_wall}
+  \includegraphics[width = 0.5\textwidth]{img/GMV_widou}
 \end{figure}
 \begin{center}
     \begin{tabular}{@{}l@{}}
@@ -137,7 +136,7 @@ Yes, the Green Great Wall can be in China, by our sandbox is in Africa, where we
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.8\textwidth]{img/Carte_FutureSahel}
-	\caption{FutureSahel Work Packages}
+	\caption{Les work packages de \textit{Future Sahel}}
 \end{figure}
 \end{frame}
 
@@ -145,12 +144,12 @@ Yes, the Green Great Wall can be in China, by our sandbox is in Africa, where we
 %	FRAME: ANR framework in 4 wp
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}[c]{Focus on WP1}
+\begin{frame}[c]{Objectifs}
 \vspace{-1cm}
-In close cooperation with the Senegalese agency of Green Great Wall (ANGMV), build a database for researcher and green great wall managers :
+En coopération étroite avec l'agence de la Grande Muraille Verte Sénégalaise, l'objectif est de co-construire une base de données a destination de la recherche et du developpement.
 	\begin{itemize}
-		\item researchers $\rightarrow$ maintain and exploit data produced in a research context (landscape ecology);
-		\item managers $\rightarrow$ use knowledge for spatio-temporal planification.
+		\item Les chercheurs $\rightarrow$ maintiennet et exploite des donées produite dans un contexte de recherche;
+		\item Les gestionnaires $\rightarrow$ utilisent leurs connaissance pour de la planification spatial et temporelle.
 	\end{itemize}
   \begin{figure}
   	\centering
@@ -161,19 +160,28 @@ In close cooperation with the Senegalese agency of Green Great Wall (ANGMV), bui
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: Goals for our SGBD
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Vous avez dit base de données?}
+\vspace{-1cm}
+Est-ce qu'on peut rendre une présentation de base de données attrayante ?
+\begin{figure}
+	\centering
+	\includegraphics[height=4cm]{img/sexyadmin}~
+  \includegraphics[height=4cm]{img/lordofthering}
+\end{figure}
+\end{frame}
 
-\begin{frame}[c]{Material and methods}
+\begin{frame}[c]{Materiel et méthodes}
 \vspace{-1cm}
 \begin{itemize}
-	\item The initial architecture developed on PostgreSQL and PostGIS (GEOLAB);
-	\item Stay compatible with BBees metadata;
-	\item We need to find a way to deal with heterogen space and time data :
+	\item L'architecture est basé sur PostgreSQL et PostGIS (GEOLAB);
+	\item \^Etre compatible avec BBees metadata;
+	\item Besoin d'être compatible entre données hétérogènes spatial et temporelle :
 	\begin{itemize}
 		\item Raster (Spot, Modis, Landsat, Sentinel);
-		\item statistical information produced by institutions;
-		\item field data.
+		\item Des données statistiques produite par les institutions;
+		\item Données de terrain.
 	\end{itemize}
-	\item Technology transfer to stockholders (ANGMV), we need to choose free and open source software.
+	\item Les téchnologies doivent être tranferer aux acteurs (ANGMV). Nous devons choisir des logiciel libre et open source.
 \end{itemize}
 \begin{figure}
 	\centering
@@ -184,6 +192,22 @@ In close cooperation with the Senegalese agency of Green Great Wall (ANGMV), bui
 \end{figure}
 \end{frame}
 
+\begin{frame}[c]{Une architecture mondiale}
+\vspace{-1cm}
+\begin{itemize}
+	\item Deux instance de la base de données fonctione dans le monde :
+	\begin{enumerate}
+		\item Dakar - UMI ;
+		\item Clermont-Ferrand - Centre Régional de Ressources Informatiques ;
+	\end{enumerate}
+	\item Dans le futur une troisieme instance sera à l'ANGMV.
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{img/sch_database}
+\end{figure}
+\end{frame}
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: context
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -191,12 +215,12 @@ In close cooperation with the Senegalese agency of Green Great Wall (ANGMV), bui
 \section{Pathway}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FRAME: WP
+%	FRAME: WP1 GENERAL
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}[c]{WP1 : large-scale data}
+\begin{frame}[c]{WP1 : Des données "généraliste"}
 \vspace{-2em}
-Find data using the Institutional analysis and development (IDA) framework (Ostrom 2009)
+Lister les données en utilisnant le framework \textit{Institutional analysis and development} (IDA) (Ostrom 2009)
 \vspace{-1em}
 \begin{figure}
 	\centering
@@ -204,52 +228,68 @@ Find data using the Institutional analysis and development (IDA) framework (Ostr
 \end{figure}
 \end{frame}
 
-\begin{frame}[c]{WP1 : biophysical environment data}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: WP1 Biophy
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}[c]{WP1 : Données Biophysique}
 \vspace{-2em}
 \begin{itemize}
   \item Work in small windows
   \begin{itemize}
-    \item Spot 6 images (1.5 m) $\rightarrow$ canopy, pond detection and NDVI calculation
-    \item MODIS (250 m) $\rightarrow$ evaluation of tree NDVI participation
-    \item Spot / Modis $\rightarrow$ evaluation of sahel greening?
+    \item Spot 6 images (1.5 m) $\rightarrow$ detection de la canopé, des mares, et NDVI;
+    \item Sentiel 2 (10 m) $\rightarrow$ unité paysagères;
+    \item Landsat (30 m) $\rightarrow$ unité paysagères;
+    \item MODIS (250 m) $\rightarrow$ évaluation de la participation des arbres au NDVI;
+    \item Grimms (5km) $\rightarrow$ reverdisement ?
   \end{itemize}
   \item Generalization $\rightarrow$ Sentinel ?
 \end{itemize}
 \vspace{-1em}
 \begin{figure}
 	\centering
-	\includegraphics[width = 7cm]{img/NDVI2015}
+	\includegraphics[width = 5cm]{img/NDVI2015}
+  \includegraphics[width = 5cm]{img/reverdiement}
 \end{figure}
 \end{frame}
 
+\begin{frame}[c]{WP1 : Calcul à partir de données publique}
+\vspace{-2em}
+Usage abondant de \textit{google earth engine} pour effectuer des calculs sur des gros jeux de données public $\rightarrow$ intégrer ces données dans la base de données.
+\vspace{-1em}
+\begin{figure}
+	\centering
+	\includegraphics[width = 10cm]{img/ggearthengine}
+\end{figure}
+\end{frame}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: WP
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}[c]{WP2 : plant biodiversity}
+\begin{frame}[c]{WP2 : Biodiversité cultivé}
 \vspace{-2em}
-Maximize the plant biodiversity used in the GGW reforestation protocols. Initially, plantations were not very diversified, mainly composed of three species of trees: \textit{Balanites aegyptiaca}, \textit{Acacia senegal}, and \textit{Acacia tortilis subsp raddiana}.
+Maximiser la biodiversité planté en utilisant le protocole de reforestation de la GMV. Initialiement les plantations n'était pas très diversifiées, principalement composer des espèces d'arbres: \textit{Balanites aegyptiaca}, \textit{Acacia senegal}, and \textit{Acacia tortilis subsp raddiana}.
 \begin{itemize}
-  \item new planting plots with other plan trees,
-  \item \textit{in situ} ecological monitoring of planting trials.
+  \item Evaluer la plantation de nouvelles parcelles de reboisement,
+  \item Monitoring par télédétection des essais de plantation (\textit{in situ}).
 \end{itemize}
 \begin{figure}
 	\centering
-	\includegraphics[width = 6cm]{img/Trees_sup15m2}
-  \includegraphics[width = 6cm]{img/GRID_Trees_sup15m2}
+	\includegraphics[width = 4cm]{img/Trees_sup15m2}
+  \includegraphics[width = 4cm]{img/GRID_Trees_sup15m2}
 \end{figure}
 \end{frame}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: WP
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}[c]{WP3 : valorization of \textit{B. aegyptiaca} sector}
+\begin{frame}[c]{WP3 : Valorisation de la "filère" \textit{B. aegyptiaca}}
 \vspace{-2em}
-This species is widely used for various purposes by local populations  : fruts, oil extracted from the almond (cooking and cosmetics).
+Cette espèce est utilisé par les acteurs pour  : les fruits, l'huile d'amande (cuisine et cosmetique).
 \begin{itemize}
-  \item Biogeographic study,
-  \item phenology and production (biomass, fruts),
-  \item intra-species variability
+  \item Etude biogéographique,
+  \item phénology et production (biomass, fruts),
+  \item variabilité intra-spécifique
 \end{itemize}
 \vspace{-1em}
 \begin{figure}
@@ -260,13 +300,13 @@ This species is widely used for various purposes by local populations  : fruts, 
 \end{figure}
 \end{frame}
 
-\begin{frame}[c]{WP4 : Resilience and "territorial" management}
+\begin{frame}[c]{WP4 : Résilience et gestion "territoriale"}
 \vspace{-2em}
-Build a common pool resource management framework for the GGW based on resilience approach and ecosystem services.
+Construire une cadre conceptuel de gestion des ressource naturelle basé sur l'approche "résilience" et services écosystémiques.
 \begin{itemize}
-  \item Historical analysis for reforestation project
-  \item Mapping ecosystem services along the GGW.
-  \item Improve the system resilience
+  \item Analyse historique des projets de développement (Mazzero 2017)
+  \item Cartographie des SES le long de la GMV,
+  \item Améliorer la résilience du système.
 \end{itemize}
 \begin{figure}
 	\centering
@@ -277,41 +317,118 @@ Build a common pool resource management framework for the GGW based on resilienc
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: LA BASE DE DONNEES AUJOURD'HUI
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{La base de donnees aujourd'hui}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: UN OUTIL D'EMPOWERMENT
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Un outil d'\textit{empowerment}!}
+\vspace{-2em}
+\begin{figure}
+	\centering
+	\includegraphics[height = 4.5cm]{img/gandalf}
+\end{figure}
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: EN LIGNE
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Architecture client/serveur}
+\vspace{-2em}
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.9\textwidth]{img/cooperation}
+\end{figure}
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: METADONNEES
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Un serveur de métadonnées}
+\vspace{-2em}
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.6\textwidth]{img/geonetwork}
+\end{figure}
+Le travail de creation de métadonner reste à avancer(70\%).
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: MANIPULATION
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[fragile]{Connecter R et postgreSQL}
+\vspace{-2em}
+\begin{verbatim}
+require(RPostgreSQL)
+m <- dbDriver("PostgreSQL")
+con <- dbConnect(m, dbname="fs_gis",
+          host='172.17.0.2',port='5432',
+          user='postgres',password='postgres')
+q <- "SELECT ST_AsText(geom) AS geom
+      FROM data_gmv.communes_gmv
+      LIMIT 10;"
+rs <- dbSendQuery(con,q)
+df <- fetch(rs,n=-1)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Connecter R et postGIS}
+\vspace{-2em}
+\begin{verbatim}
+library(rpostgis)
+con<-dbConnect("PostgreSQL",
+                dbname='fs_gis',
+                host='172.17.0.2',
+                port='5432',
+                user='postgres',
+                password='postgres')
+shp <- pgGetGeom(con,
+            name=c("data_gmv","communes_gmv"),
+            geom = "geom")
+plot(shp)
+\end{verbatim}
+\end{frame}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: connexion
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Se connecter avec Qgis}
+\vspace{-2em}
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.8\textwidth]{img/qgis_screenshot}
+\end{figure}
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: Conclusion
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Perspective}
 
-\begin{frame}[c]{Post-doctoral research benefit - Agent based modeling and ComMod}
+\begin{frame}[c]{Database modeling and ComMod}
 \vspace{-2em}
-Create a database is ever the first step of something. My interest is about cooperation and agent-based modeling :
-\begin{itemize}
-  \item cooperation and emergence
-  \item Agent based modeling and ComMod.
-\end{itemize}
+Créer une base de données est un processus itératif. Dans le cadre \textit{Future Sahel}, cette construction est en fait une co-construction avec les acteurs ... ça prend du temps !
 \begin{figure}
 	\centering
-	\includegraphics[height = 3.5cm]{img/CeLL_delay2015}
-  \includegraphics[height = 3.5cm]{img/fielWdelay}
-  \caption{\small{CeLL model (Delay 2015)}}
+	\includegraphics[height = 3cm]{img/iteration}
+\end{figure}
+La démarche \includegraphics[height = 0.4cm]{img/logo_commod} : \textbf{i)} vocation à être remises en cause, \textbf{ii)} aucune hypothèse implicite, \textbf{iii)} processus de
+validation.
+
+\end{frame}
+
+\begin{frame}[c]{En guise d'exemple}
+\vspace{-2em}
+Travail sur les usages liée à l'arbres dans les socio-écosystèmes
+\begin{figure}
+	\centering
+	\includegraphics[height = 3cm]{img/ateliers}
+  \includegraphics[height = 3cm]{img/bar_general}\\
+  \includegraphics[height = 3cm]{img/class_CART}
 \end{figure}
 \end{frame}
 
-\begin{frame}[c]{Post-doctoral research benefit - Cooperation}
-\vspace{-2em}
-\begin{itemize}
-  \item Concept paper proposed in JASSS
-  \begin{itemize}
-    \item explore irrigation in Mediterranean context
-    \item beneficial environmental condition of cooperation emergence
-  \end{itemize}
-  \item Ferlo is a quiet hard zone for humans. Can we explore this space with our hypothesis in cooperation ?
-\end{itemize}
-\begin{figure}
-	\centering
-	\includegraphics[height = 3.5cm]{img/Proj42}
-  \includegraphics[height = 3.5cm]{img/sng_cow2007}
-\end{figure}
-\end{frame}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: MERCI DE VOTRE ATTENTION
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -321,11 +438,9 @@ Create a database is ever the first step of something. My interest is about coop
 \begin{frame}
   \vspace{-1em}
   \begin{minipage}[t][.8\textheight]{\textwidth}
-    \color{\cnGrey}{\LARGE{Thank you for your attention}}
+    \color{\cnGrey}{\LARGE{Merci de votre attention !}}
 
     \vfill
-
-  %\hfill \small{Photo credit : Thomas m-louis. sur \includegraphics[height=0.55cm]{img/flickr_logo}}
   \end{minipage}
   \vspace{-3.5em}
   \centering
