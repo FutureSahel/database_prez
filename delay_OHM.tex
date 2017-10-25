@@ -181,7 +181,7 @@ Est-ce qu'on peut rendre une présentation de base de données attrayante ?
 		\item Des données statistiques produites par les institutions;
 		\item Données de terrain.
 	\end{itemize}
-	\item Les technologies doivent être transférées aux acteurs (ANGMV). Nous devons choisir des logiciel libre et open source.
+	\item Les technologies doivent être transférées aux acteurs (ANGMV). Nous devons choisir des logiciels libres et \textit{open source}.
 \end{itemize}
 \begin{figure}
 	\centering
@@ -195,12 +195,12 @@ Est-ce qu'on peut rendre une présentation de base de données attrayante ?
 \begin{frame}[c]{Une architecture mondiale}
 \vspace{-1cm}
 \begin{itemize}
-	\item Deux instances de la base de données fonctionnent dans le monde :
+	\item La base de données est hébergé a deux endroits :
 	\begin{enumerate}
 		\item Dakar - UMI ;
 		\item Clermont-Ferrand - Centre Régional de Ressources informatiques ;
 	\end{enumerate}
-	\item Dans le futur, une troisième instance sera à l'ANGMV.
+	\item Dans le futur, une troisième version de la base sera hébergé à l'ANGMV.
 \end{itemize}
 \begin{figure}
 	\centering
@@ -238,7 +238,7 @@ Lister les données en utilisant le framework \textit{Institutional analysis and
   \item Work in small windows
   \begin{itemize}
     \item Spot 6 images (1.5 m) $\rightarrow$ détection de la canopé, des mares, et NDVI;
-    \item Sentiel 2 (10 m) $\rightarrow$ unités paysagères;
+    \item Sentinel 2 (10 m) $\rightarrow$ unités paysagères;
     \item Landsat (30 m) $\rightarrow$ unités paysagères;
     \item MODIS (250 m) $\rightarrow$ évaluation de la participation des arbres au NDVI;
     \item Grimms (5km) $\rightarrow$ reverdissement ?
@@ -253,9 +253,9 @@ Lister les données en utilisant le framework \textit{Institutional analysis and
 \end{figure}
 \end{frame}
 
-\begin{frame}[c]{WP1 : Calcul à partir de données publique}s
+\begin{frame}[c]{WP1 : Calcul à partir de données publiques}
 \vspace{-2em}
-Usage abondant de \textit{google earth engine} pour effectuer des calculs sur des gros jeux de données publics $\rightarrow$ intégrer ces données dans la base de données.
+Usage abondant de \textit{google earth engine} pour effectuer des calculs sur des gros jeux de données publiques $\rightarrow$ intégrer ces données dans la base de données.
 \vspace{-1em}
 \begin{figure}
 	\centering
@@ -266,9 +266,9 @@ Usage abondant de \textit{google earth engine} pour effectuer des calculs sur de
 %	FRAME: WP
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}[c]{WP2 : Biodiversité cultivé}e
+\begin{frame}[c]{WP2 : Biodiversité cultivée}
 \vspace{-2em}
-Maximiser la biodiversité plantée en utilisant le protocole de reforestation de la GMV. Initialement les plantations n'étaient pas très diversifiées, principalement composer des espèces d'arbres: \textit{Balanites aegyptiaca}, \textit{Acacia senegal}, and \textit{Acacia tortilis subsp raddiana}.
+Maximiser la biodiversité plantée en utilisant le protocole de reforestation de la GMV. Initialement les plantations n'étaient pas très diversifiées, principalement composées des espèces d'arbres: \textit{Balanites aegyptiaca}, \textit{Acacia senegal}, and \textit{Acacia tortilis subsp raddiana}.
 \begin{itemize}
   \item Evaluer la plantation de nouvelles parcelles de reboisement,
   \item Monitoring par télédétection des essais de plantation (\textit{in situ}).
@@ -288,7 +288,7 @@ Maximiser la biodiversité plantée en utilisant le protocole de reforestation d
 Cette espèce est utilisée par les acteurs pour  : les fruits, l'huile d'amande (cuisine et cosmétique).
 \begin{itemize}
   \item Etude biogéographique,
-  \item phénologie et production (biomass, fruits),
+  \item phénologie et production (biomasse, fruits),
   \item variabilité intraspécifique
 \end{itemize}
 \vspace{-1em}
@@ -296,13 +296,13 @@ Cette espèce est utilisée par les acteurs pour  : les fruits, l'huile d'amande
 	\centering
 	\includegraphics[width = 7cm]{img/Biomasse_arboree}
   \vspace{-1em}
-  \caption{Biomass (J.-L.Peiry and D. Ndiaye)}
+  \caption{Biomasse arborée (J.-L.Peiry and D. Ndiaye)}
 \end{figure}
 \end{frame}
 
 \begin{frame}[c]{WP4 : Résilience et gestion "territoriale"}
 \vspace{-2em}
-Construire une cadre conceptuelle de gestion des ressources naturelles basées sur l'approche "résilience" et services écosystémiques.
+Construire une cadre conceptuel de gestion des ressources naturelles basé sur l'approche "résilience" socio-environnementale et services écosystémiques (SES).
 \begin{itemize}
   \item Analyse historique des projets de développement (Mazzero 2017)
   \item Cartographie des SES le long de la GMV,
@@ -344,15 +344,26 @@ Construire une cadre conceptuelle de gestion des ressources naturelles basées s
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FRAME: METADONNEES
+%	FRAME: La base de données en Chiffre
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{frame}[c]{Un serveur de métadonnées}
+\begin{frame}[fragile]{La base de données en chiffre}
 \vspace{-2em}
+\begin{itemize}
+  \item Pas d'interface web !
+  \item 85 tables spatailes provenant de :
+    \begin{itemize}
+      \item Agence Nationnal d'Amenagement du territoire,
+      \item CSE,
+      \item Prodig,
+      \item FAO,
+      \item NASA, Copernicus, etc,
+      \item Données de recherches.
+    \end{itemize}
+\end{itemize}
 \begin{figure}
 	\centering
-	\includegraphics[width = 0.6\textwidth]{img/geonetwork}
+	\includegraphics[width = 0.9\textwidth]{img/data_golds}
 \end{figure}
-Le travail de création de métadonnées reste à avancer(70\%).
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -390,6 +401,8 @@ shp <- pgGetGeom(con,
 plot(shp)
 \end{verbatim}
 \end{frame}
+
+
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: connexion
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -402,20 +415,42 @@ plot(shp)
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: METADONNEES
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Un serveur de métadonnées}
+\vspace{-2em}
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.6\textwidth]{img/geonetwork}
+\end{figure}
+Le travail de création de métadonnées est à poursuivre (reste 70\%).
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: Conclusion
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Perspective}
 
 \begin{frame}[c]{Database modelling and ComMod}
 \vspace{-2em}
-Créer une base de données est un processus itératif. Dans le cadre \textit{Future Sahel}, cette construction est en fait une co-construction avec les acteurs ... ça prend du temps !
+Créer une base de données est un processus itératif. Dans le cadre de \textit{Future Sahel}, cette construction est en fait une co-construction avec les acteurs ... ça prend du temps !
 \begin{figure}
 	\centering
 	\includegraphics[height = 3cm]{img/iteration}
 \end{figure}
 La démarche \includegraphics[height = 0.4cm]{img/logo_commod} : \textbf{i)} vocation à être remises en cause, \textbf{ii)} aucune hypothèse implicite, \textbf{iii)} processus de
 validation.
+\end{frame}
 
+\begin{frame}[c]{Quid des données spécifique de recherche ?}
+\vspace{-2em}
+\begin{block}{\textsc{Comment aller plus loin ?}}
+  Est-ce qu'il est possible de construire une ontologie commune aux chercheurs et au gestionnaire, pour proposer un schéma de base donnée suffisamment abstrait pour répondre à toutes les problématiques ?
+\end{block}
+\begin{figure}
+	\centering
+	\includegraphics[height = 3cm]{img/ontologies}
+\end{figure}
 \end{frame}
 
 \begin{frame}[c]{En guise d'exemple}
