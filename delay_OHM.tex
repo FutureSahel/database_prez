@@ -158,57 +158,6 @@ En coopération étroite avec l'agence de la Grande Muraille Verte Sénégalaise
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FRAME: Goals for our SGBD
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{frame}[c]{Vous avez dit base de données?}
-\vspace{-1cm}
-Est-ce qu'on peut rendre une présentation de base de données attrayante ?
-\begin{figure}
-	\centering
-	\includegraphics[height=4cm]{img/sexyadmin}~
-  \includegraphics[height=4cm]{img/lordofthering}
-\end{figure}
-\end{frame}
-
-\begin{frame}[c]{Materiel et méthodes}
-\vspace{-1cm}
-\begin{itemize}
-	\item L'architecture est basée sur PostgreSQL et PostGIS (GEOLAB);
-	\item \^Etre compatible avec BBees metadata;
-	\item Besoin d'être compatible entre données hétérogènes spatiales et temporelle :
-	\begin{itemize}
-		\item Raster (Spot, Modis, Landsat, Sentinel);
-		\item Des données statistiques produites par les institutions;
-		\item Données de terrain.
-	\end{itemize}
-	\item Les technologies doivent être transférées aux acteurs (ANGMV). Nous devons choisir des logiciels libres et \textit{open source}.
-\end{itemize}
-\begin{figure}
-	\centering
-	\includegraphics[height=20mm]{img/PostGIS_logo}
-	\includegraphics[height=20mm]{img/QGis_Logo}
-	\includegraphics[height=20mm]{img/GrassGIS_banner}
-	\includegraphics[height=20mm]{img/Rlogo}
-\end{figure}
-\end{frame}
-
-\begin{frame}[c]{Une architecture mondiale}
-\vspace{-1cm}
-\begin{itemize}
-	\item La base de données est hébergé a deux endroits :
-	\begin{enumerate}
-		\item Dakar - UMI ;
-		\item Clermont-Ferrand - Centre Régional de Ressources informatiques ;
-	\end{enumerate}
-	\item Dans le futur, une troisième version de la base sera hébergé à l'ANGMV.
-\end{itemize}
-\begin{figure}
-	\centering
-	\includegraphics[height=5cm]{img/sch_database}
-\end{figure}
-\end{frame}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: context
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -320,6 +269,56 @@ Construire une cadre conceptuel de gestion des ressources naturelles basé sur l
 %	FRAME: LA BASE DE DONNEES AUJOURD'HUI
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{La base de donnees aujourd'hui}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: Goals for our SGBD
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Vous avez dit base de données?}
+\vspace{-1cm}
+Est-ce qu'on peut rendre une présentation de base de données attrayante ?
+\begin{figure}
+	\centering
+	\includegraphics[height=4cm]{img/sexyadmin}~
+  \includegraphics[height=4cm]{img/lordofthering}
+\end{figure}
+\end{frame}
+
+\begin{frame}[c]{Materiel et méthodes}
+\vspace{-1cm}
+\begin{itemize}
+	\item L'architecture est basée sur PostgreSQL et PostGIS (GEOLAB);
+	\item \^Etre compatible avec BBees metadata;
+	\item Besoin d'être compatible entre données hétérogènes spatiales et temporelle :
+	\begin{itemize}
+		\item Raster (Spot, Modis, Landsat, Sentinel);
+		\item Des données statistiques produites par les institutions;
+		\item Données de terrain.
+	\end{itemize}
+	\item Les technologies doivent être transférées aux acteurs (ANGMV). Nous devons choisir des logiciels libres et \textit{open source}.
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[height=20mm]{img/PostGIS_logo}
+	\includegraphics[height=20mm]{img/QGis_Logo}
+	\includegraphics[height=20mm]{img/GrassGIS_banner}
+	\includegraphics[height=20mm]{img/Rlogo}
+\end{figure}
+\end{frame}
+
+\begin{frame}[c]{Une architecture mondiale}
+\vspace{-1cm}
+\begin{itemize}
+	\item La base de données est hébergé a deux endroits :
+	\begin{enumerate}
+		\item Dakar - UMI ;
+		\item Clermont-Ferrand - Centre Régional de Ressources informatiques ;
+	\end{enumerate}
+	\item Dans le futur, une troisième version de la base sera hébergé à l'ANGMV.
+\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{img/sch_database}
+\end{figure}
+\end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: UN OUTIL D'EMPOWERMENT
@@ -415,7 +414,20 @@ plot(shp)
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FRAME: METADONNEES
+%	FRAME: METADONNEES 1
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}[c]{Des fiches de métadonnées}
+\vspace{-2em}
+\begin{figure}
+	\centering
+	\includegraphics[width = \textwidth]{img/qgis_qsphere}
+\end{figure}
+Utilisation de Qgis et Qsphères : un plugin developper par le CNIG répondant a la
+norme INSPIRE.
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: METADONNEES 2
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \begin{frame}[c]{Un serveur de métadonnées}
 \vspace{-2em}
